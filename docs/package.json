@@ -1,0 +1,16 @@
+{
+  "name": "my-zettelkasten",
+  "version": "1.0.0",
+  "description": "Simple static site generator for zettelkasten notes",
+  "scripts": {
+    "build": "node build.js",
+    "serve": "node build.js && cd build && python3 -m http.server 3000",
+    "clean": "rm -rf build && mkdir build",
+    "deploy": "npm run build && git add build && git commit -m 'Deploy to GitHub Pages' && git push origin main"
+  },
+  "dependencies": {
+    "marked": "^11.1.1"
+  },
+  "keywords": ["zettelkasten", "static-site", "notes"],
+  "author": "Petre Laskov"
+}
